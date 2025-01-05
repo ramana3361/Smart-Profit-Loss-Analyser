@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit or Loss on Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555555;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profit or Loss on Product</h1>
+        <form action="ProfitOrLossServlet" method="post">
+        
+            <label for="costPrice">Enter the cost price:</label>
+            <input type="text" id="costPrice" name="costPrice" placeholder="Enter cost price">
+
+            <label for="sellingPrice">Enter the selling price:</label>
+            <input type="text" id="sellingPrice" name="sellingPrice" placeholder="Enter selling price">
+
+            <input type="submit" value="Calculate">
+        </form>
+
+        <div class="result">
+            Profit or Loss: <span id="result">_____</span>
+        </div>
+    </div>
+</body>
+</html>
